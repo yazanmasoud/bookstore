@@ -1,3 +1,22 @@
-*{
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+main {
+    flex: 1;
+}
+
+html {
+    font-size: 16px;
+    /* Basis für rem */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #041821;
 }
