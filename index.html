@@ -6,69 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOKSTORE</title>
     <script src="script.js" defer></script>
+    <script src="./script/book.js" defer></script>
+    <script src="./script/template.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./style/standrad.css">
 </head>
 
-<body>
+<body onload="init()">
     <header class="HeaderSite">
 
     </header>
+<main class="MainBookstore">
+        <div id="book"></div>
 
-    <main class="MainBookstore">
-        <section class="BookSlot">
-            <header class="BookSlotHeader">
-                <h2>Book Title</h2>
-            </header>
-            <div class="BookInformations">
-                <div class="BookInformatiosHead">
-                    <img class="BookIcon" src="./assets/icons/book.png" alt="Book Icon">
-                    <div class="Likes">
-                        <span>1250</span>
-                        <img class="LikeIcon" src="./assets/icons/heart.png" alt="Likes Icon">
-                    </div>
-                </div>
-
-                <table class="BookInformationsTable">
-                    <tr>
-                        <td>Preis</td>
-                        <td>19.99 $</td>
-                    </tr>
-                    <tr>
-                        <td>Author</td>
-                        <td>Clara Meer</td>
-                    </tr>
-                    <tr>
-                        <td>Erscheinungsjahr</td>
-                        <td>2018</td>
-                    </tr>
-                    <tr>
-                        <td>Genre</td>
-                        <td>Fantasy</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="BookComments">
-                <h3>Kommentare..</h3>
-                <ul class="CommentList">
-                    <li class="Comment">
-                       <strong>Leser123:</strong>
-                       <p>Sehr gutes Buch!</p>
-                    </li>
-                    <li class="Comment">
-                        <strong>Bookworm:</strong>
-                        <p>Hat mir gefallen.</p>
-                    </li>
-                </ul>
-
-            </div>
-        </section>
-
-    </main>
+</main>
 
     <footer class="FooterSite">
-
     </footer>
+                
+
 
 </body>
 

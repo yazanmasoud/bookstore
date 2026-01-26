@@ -1,17 +1,16 @@
+/* ===============================
+   SITE LAYOUT
+================================ */
+
 .HeaderSite {
     background-color: #0e4d61;
     height: 80px;
+    margin-bottom: 24px;
 }
 
 .FooterSite {
     background-color: #0e4d61;
     height: 80px;
-}
-
-/* main bookstore */
-.BookSLotHeader {
-    border-bottom: solid;
-    border-bottom-color: rgb(107, 116, 241);
 }
 
 .MainBookstore {
@@ -21,6 +20,10 @@
     align-items: center;
 }
 
+
+/* ===============================
+   BOOK SLOT (CARD)
+================================ */
 
 .BookSlot {
     width: 430px;
@@ -32,15 +35,8 @@
     border-radius: 10px;
     box-shadow: 12px 12px 24px 8px rgb(18 80 99 / 0.2);
     padding: 16px;
+    margin-bottom: 24px;
 }
-
-
-.Separator {
-    width: 430px;
-    height: 2px;
-    background-color: #0e4d61;
-}
-
 
 .BookSlotHeader {
     color: white;
@@ -50,6 +46,22 @@
     width: 100%;
     margin-bottom: 16px;
 }
+
+.BookSLotHeader {
+    border-bottom: solid;
+    border-bottom-color: rgb(107, 116, 241);
+}
+
+.Separator {
+    width: 430px;
+    height: 2px;
+    background-color: #0e4d61;
+}
+
+
+/* ===============================
+   BOOK INFORMATION
+================================ */
 
 .BookInformations {
     display: flex;
@@ -69,51 +81,77 @@
     width: 100%;
     border-collapse: collapse;
     border-bottom: solid;
-    
-
 }
 
 .BookInformationsTable td {
     padding: 8px 0;
 }
 
-
 .BookInformationsTable td:last-child {
     text-align: right;
     opacity: 0.7;
+}
 
+
+/* ===============================
+   COMMENTS
+================================ */
+.CommentsTitle {
+    color: white;
 }
 
 .BookComments {
     margin-top: 16px;
-    flex: 1;                 /* nimmt den restlichen Platz */
+    flex: 1;
     display: flex;
+    width: 100%;
     flex-direction: column;
+    min-height: 0;
 }
 
+.CommentList {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 6px;
+    margin: 0;
+    padding-left: 0;
+}
 
-.Comment{
+.Comment {
     display: flex;
     gap: 10px;
-    justify-content: flex-start;
+    align-items: flex-start;
     color: white;
     list-style: none;
-    
+    margin-top: 16px;
+}
+
+.CommentInputField {
+    width: 300px;
+    margin-top: 16px;
 }
 
 
-
-
+/* ===============================
+   ICONS & MEDIA
+================================ */
 
 .BookIcon {
     width: 60px;
 }
 
-
 .LikeIcon {
     width: 42px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
 }
 
+.LikeIcon:hover {
+    transform: scale(1.1);
+    opacity: 1;
+
+}
 
 .Likes {
     display: flex;
@@ -122,5 +160,4 @@
     gap: 12px;
     color: white;
     opacity: 0.8;
-
 }
