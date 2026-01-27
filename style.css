@@ -141,7 +141,7 @@
 }
 
 .LikeIcon {
-    width: 42px;
+    width: 34px;
     cursor: pointer;
     transition: all 0.2s ease;
 
@@ -150,7 +150,6 @@
 .LikeIcon:hover {
     transform: scale(1.1);
     opacity: 1;
-
 }
 
 .Likes {
