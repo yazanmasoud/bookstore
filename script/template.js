@@ -8,8 +8,8 @@ function getBookTemplate(book , bookIndex) {
                 <div class="BookInformatiosHead">
                     <img class="BookIcon" src="./assets/icons/book.png" alt="Book Icon">
                     <div class="Likes">
-                        <span id="likes-count" data-base="1250" >1250</span>
-                        <img onclick="addLike()" class="LikeIcon" src="./assets/icons/heart.png" alt="Likes Icon">
+                        <span id="likes-count-${bookIndex}">${book.likes}</span>
+                        <img id="like-image-${bookIndex}" onclick="toggleLike(${bookIndex})" class="LikeIcon"  src="assets/icons/heart(1).png" alt="Likes Icon">
                     </div>
                 </div>
 
