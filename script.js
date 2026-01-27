@@ -4,8 +4,10 @@ function init() {
 
     for (let bookIndex = 0; bookIndex < books.length; bookIndex++) {
         const book = books[bookIndex];
-        myBook.innerHTML += getBookTemplate(book , bookIndex);
+        myBook.innerHTML += getBookTemplate(book, bookIndex);
+        rendLikeDislikeIcon(bookIndex)
     }
+  
 }
 
 function rendComments(book) {
@@ -16,20 +18,48 @@ function rendComments(book) {
 
     }
     return myComments;
+    
 }
 
 function addComment(bookIndex) {
     const myComment = document.getElementById(`comment-input-${bookIndex}`).value;
     books[bookIndex].comments.unshift({
-        name: "Du",
+        name: "DU",
         comment: myComment
     });
     init();
 }
+function rendLikeDislikeIcon(bookIndex) {
+    let book = books[bookIndex];
+    let likeImage = document.getElementById(`like-image-${bookIndex}`);
 
-function addLike() {
-    const likesSpan = document.getElementById('likes-count');
-    const likes = Number(likesSpan.getAttribute("data-base"));
-    likesSpan.innerHTML = likes +1;
+    if (book.liked === true) {
+        likeImage.src = "./assets/icons/heart.png";
 
+    }
+    else if (book.liked === false) {
+        likeImage.src = "assets/icons/heart(1).png";
+
+    }
 }
+
+function toggleLike(bookIndex) {
+    let likeImage = document.getElementById(`like-image-${bookIndex}`);
+    let likesCount = document.getElementById(`likes-count-${bookIndex}`)
+    let book = books[bookIndex];
+    if (book.liked === false) {
+        likeImage.src = "./assets/icons/heart.png";
+        book.likes += 1;
+        likesCount.innerText = book.likes;
+        book.liked = true;
+
+    }
+    else if (books[bookIndex].liked === true) {
+        book.likes -= 1;
+        likesCount.innerText = book.likes;
+
+        book.liked = false;
+        likeImage.src = "assets/icons/heart(1).png";
+    }
+}
+
